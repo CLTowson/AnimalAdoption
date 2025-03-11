@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <style type="text/css">
+            table, th, td{
+                border-spacing: 0ch;
+                border: 1px solid;
+                width: 100%;
+                text-align: center;
+            }
+            th{
+                background-color: black;
+                color:azure;
+            }
+            h1{
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="thankyouforapplying.html" method="get">
+        <h1>Animal Adoption Form: </h1>
+        <table id="table1">
+            <tr><th colspan="2">Personal Information: </th></tr>
+            <tr>
+                <td>Name: </td>
+                <td><input type="textbox" name="name" required="required"></td>
+            </tr>
+            <tr>
+                <td>Phone Number: </td>
+                <td><input type="textbox" name="phoneNum" required="required"></td>
+            </tr>
+            <tr>
+                <td>Email Address: </td>
+                <td><input type="email" name="email" required="required"></td>
+            </tr>
+            <tr>
+                <td>Description of Current Situation: </td>
+                <td><input type="textbox" name="description"></td>
+            </tr>
+        </table>
+        <div></div>
+        <table id="table2">
+            <tr><th colspan="2">Animals: </th></tr>
+            <tr>
+                <td>Serial Code of Animal You are Looking to Adopt: </td>
+                <td><input type="textbox" name="animalCode" required="required"></td>
+            </tr>
+            <tr>
+                <td>Have You Had a Pet Before: </td>
+                <td><input type="checkbox" name="hadPet"></td>
+            </tr>
+            <tr>
+                <td>Do You Have Other Pets Now: </td>
+                <td><input type="checkbox" name="petNow"></td>
+            </tr>
+        </table>
+        <p></p>
+        <p></p>
+            <input name="sbutton" type="submit" value="Submit">
+        </form>
+    </body>
+</html>

@@ -29,6 +29,14 @@ Description:    Volunteer form.
             h1, p, h2, h3 {
                 font-family: 'Helvetica';
             }
+            .container {
+                display:block;
+            }
+
+            .small-image {
+                width: 100px; 
+                height: auto; 
+            }
         </style>
         <script>
             function redirect() {
@@ -40,7 +48,10 @@ Description:    Volunteer form.
     </head>
     <body>
         <form action="mailto:EllenVienna4848@gmail.com?subject=Volunteer Form" method="post" enctype="text/plain" onsubmit="redirect()">
-        <h1>Volunteer Form: </h1>
+            <div class="container">
+                <img src="les Queues Animal Rescue.jpg"style="margin:0px auto;display:block"class="small-image"/>
+                <h1>Les Queues Volunteer Form: </h1>
+            </div>
         <table id="table1">
             <tr><th colspan="2">Personal Information: </th></tr>
             <tr>

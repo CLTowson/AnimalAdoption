@@ -3,12 +3,13 @@ import Slideshow from "./Slideshow";
 import style from "./Style.css";
 import VolunteerForm from "./VolunteerForm";
 import { Link } from "react-router-dom";
-
+import logo from "./assets/les Queues Animal Rescue.jpg";
 
 function Home() {
   return (
     <>
       <div className="home">
+      <img src={logo} alt="Les Queues Logo" className="small-image" />
       <h1>Les Queues Animal Rescue</h1>
       <div>
         <Link to="/AnimalDescriptions"><button>Animal Descriptions</button></Link>

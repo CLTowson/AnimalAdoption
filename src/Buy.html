@@ -1,0 +1,65 @@
+<!--AUTHOR:Savannah Green
+CLASS: COSC 484 
+PROFESSOR: Jal Irani-->
+<!DOCTYPE html>
+<html>
+    <head>
+     <!-- Importing the .css style sheet -->
+    <link rel="stylesheet" href="./Style.css" />
+    <title> Purchase</title>
+    </head>
+    <body>
+        <h3>Billing/Shipping Address</h3>
+        <!-- Form to Purchase an item-->
+        <form id="BuyingForm" method ="GET" action="confirmation.html"> 
+            <label for = "Fname"> First Name </label><br/>
+            <input type = "text" name = "Fname" required/> <br/>
+
+            <label for = "Lname"> Last Name </label><br/>
+            <input type = "text" name = "Lname" required/> <br/>
+
+            <label for = "email"> Email </label><br/>
+            <input type = "email" name = "email" required/> <br/>
+
+            <label for = "address"> Shipping Address </label><br/>
+            <input type = "text" name = "address" required/> <br/>
+
+            <label for = "city"> City </label><br/>
+            <input type = "text" name = "city" required/> <br/>
+
+            <label for = "state"> State </label><br/>
+            <input type = "text" name = "state" required/> <br/>
+
+            <h3>Payment Information</h3>
+
+            <label for = "cardName"> Name On Card: </label><br/>
+            <input type = "text" name = "cardName" required/> <br/>
+
+            <label for = "cardNum"> Card Number: </label><br/>
+            <input type = "number" name = "cardNum" required/> <br/>
+
+            <label for = "expiration"> Expiration: </label><br/>
+            <input type = "date" name = "expiration" required/> <br/>
+
+            <label for = "cvv"> CVV: </label><br/>
+            <input type = "number" name = "cvv" required/> <br/> 
+
+            <button class="submit" onclick="sold()">Checkout</button>
+        </form>
+        <script>
+            //Function to mark a product as sold out after it's been purchased. 
+           function sold(){
+            let listings = JSON.parse(localStorage.getItem("productListings")) || [];
+            let productToBuy = localStorage.getItem("selectedProduct");
+
+            listings = listings.map(product =>{
+            if (product.productName === productToBuy){
+                product.status = "Sold Out";
+            }
+            return product;
+           });
+           localStorage.setItem("productListings", JSON.stringify(listings));
+        }
+        </script>
+    </body>
+</html>

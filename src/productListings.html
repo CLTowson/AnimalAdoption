@@ -1,0 +1,53 @@
+<!-- AUTHOR: Savannah Green
+CLASS: COSC 484 
+PROFESSOR: Jal Irani -->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Importing the .css style sheet -->
+    <link rel="stylesheet" href="./Style.css" />
+    <title> Product Listings</title>
+</head>
+<body>
+    <h1> Product Listings</h1>
+    <div id="productInfo"></div>
+
+    <script>
+        // Retrieve stored products
+        let listings = JSON.parse(localStorage.getItem("productListings")) || [];
+
+        let htmlContent = "";
+
+        //listing formatting
+        if (listings.length === 0) {
+            htmlContent = "<p>No products listed.</p>";
+        } else {
+            listings.forEach((product, index) => {
+                htmlContent += `
+                <div class="product-container">
+                    <div class="left-column">
+                        <img src="${product.image}" alt="Product Image" width="150" />
+                        <p class="price">Price: $${product.sellPrice}</p>
+                    </div>
+                    <div class="right-column">
+                        <h2>${product.productName}</h2>
+                        <p>Condition: ${product.condition}</p>
+                        <p>Review: ${product.review}</p>
+                        ${product.status === "Sold Out" ? "<p class='sold-out'>Sold Out</p>" : `<button class="buy_btn" onclick="buyProduct('${product.productName}')">Buy Now</button>`}
+
+                    </div>
+                </div>
+                <hr/>`;
+            });
+        }
+
+        document.getElementById("productInfo").innerHTML = htmlContent;
+
+        function buyProduct(productName){
+            localStorage.setItem("selectedProduct", productName);
+            window.location.href = "Buy.html"
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <style type="text/css">
+            table, th, td{
+                border-spacing: 0ch;
+                border: 1px solid;
+                width: 100%;
+                text-align: center;
+            }
+            td{
+                width: 50%;
+            }
+            th{
+                background-color: black;
+                color:azure;
+            }
+            h1{
+                text-align:center;
+            }
+            body{
+                background-color: #f1fef7;
+            }
+            h1, p, h2, h3 {
+                font-family: 'Helvetica';
+            }
+        </style>
+                <script>
+                    function redirect() {
+                        setTimeout(() => {
+                            window.location.href = "thankyouforapplying.html";
+                        }, 1000);
+                    }
+                </script>
+    </head>
+    <body>
+        <form action="mailto:EllenVienna4848@gmail.com" method="post" enctype="text/plain" onsubmit="redirect()">
+        <h1>Animal Adoption Form: </h1>
+        <table id="table1">
+            <tr><th colspan="2">Personal Information: </th></tr>
+            <tr>
+                <td>Name: </td>
+                <td><input type="textbox" name="Name" required="required"></td>
+            </tr>
+            <tr>
+                <td>Phone Number: </td>
+                <td><input type="textbox" name="Phone Number" required="required"></td>
+            </tr>
+            <tr>
+                <td>Email Address: </td>
+                <td><input type="email" name="Email" required="required"></td>
+            </tr>
+            <tr>
+                <td>Description of Current Situation: </td>
+                <td><input type="textbox" name="Description"></td>
+            </tr>
+        </table>
+        <div></div>
+        <table id="table2">
+            <tr><th colspan="2">Animals: </th></tr>
+            <tr>
+                <td>Serial Code of Animal You are Looking to Adopt: </td>
+                <td><input type="textbox" name="Animal Code" required="required"></td>
+            </tr>
+            <tr>
+                <td>Have You Had a Pet Before: </td>
+                <td>Yes: <input type="radio" name="Had Pet" value="Yes">  No: <input type="radio" name="Had Pet" value="No"></td>
+            </tr>
+            <tr>
+                <td>Do You Have Other Pets Now: </td>
+                <td>Yes: <input type="radio" name="Pet Now" value="Yes">  No: <input type="radio" name="Pet Now" value="No"></td>
+            </tr>
+        </table>
+        <p></p>
+        <p></p>
+            <input name="sbutton" type="submit" value="Submit">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<!--AUTHOR:Savannah Green
+CLASS: COSC 484 
+PROFESSOR: Jal Irani-->
+<!DOCTYPE html>
+<html>
+    <head>
+     <!-- Importing the .css style sheet -->
+    <link rel="stylesheet" href="./Style.css" />
+    <title> Sell</title>
+    </head>
+    <body>
+        <h1> Adopt N' Shop</h1><br/>
+         <a href="productListings.html">Buy Products</a><br/>
+
+         <!-- form to list products-->
+          <form id="listingForm" method ="GET" actions="productListings.html"> 
+            <label for = "Fname"> First Name </label><br/>
+            <input type = "text" name = "Fname" required/> <br/>
+
+            <label for = "Lname"> Last Name </label><br/>
+            <input type = "text" name = "Lname" required/> <br/>
+
+            <label for = "product"> Product Name </label><br/>
+            <input type = "text" name = "product" id="product" required/> <br/>
+
+            <label for = "origPrice"> Original Price </label><br/>
+            <input type = "number" name = "origPrice" required/> <br/>
+
+            <label for = "sellPrice"> Selling Price </label><br/>
+            <input type = "number" name = "sellPrice" id="sellPrice" required/> <br/>
+
+            <p>Insert an image of your product</p>
+            <input type= "file" name = "image" accept="image*" id="image"/> <br/>
+
+            <h3> Rate the Condition of Your Product</h3>
+            <p>Take in to account the condition of the packaging and the amount of product left!</p>
+            <label for = "condition"> Poor - less than 1/2 remaining </label>
+            <input type = "radio" name = "condition" id = "condition" value = "poor" required/> <br/>
+
+            <label for = "condition"> Okay - 1/2 remaining</label>
+            <input type = "radio" name = "condition" id = "condition" value = "Okay" required/> <br/>
+
+            <label for = "condition"> Good - 3/4 remaining </label>
+            <input type = "radio" name = "condition" id = "condition" value = "good" required/> <br/>
+
+            <label for = "condition"> Great - gently used </label>
+            <input type = "radio" name = "condition" id = "condition" value = "great" required/> <br/>
+
+            <label for = "condition"> Excellent - new/never used </label>
+            <input type = "radio" name = "condition" id = "condition" value = "excellent" required/> <br/>
+
+            <label for = "review"> Product Review </label><br/>
+            <p> Tell us about the product and why you are selling it</p>
+            <input type = "text" name = "review" id="review"/> <br/>
+
+            <h3> Banking Information</h3><br/>
+            <label for = "acctNum"> Account Number </label><br/>
+            <input type = "number" name = "acctNum" required/> <br/>
+
+            <label for = "RouteNum"> Routing Number </label><br/>
+            <input type = "number" name = "RouteNum" required/> <br/>
+
+            <input type = "submit" value = "Submit"/>
+          </form>
+
+          <script>
+            document.getElementById("listingForm").addEventListener("submit", function(event){
+                event.preventDefault();
+                let productName = document.getElementById("product").value;
+                localStorage.setItem("productName", productName);
+
+                let sellPrice = document.getElementById("sellPrice").value;
+                localStorage.setItem("sellPrice", sellPrice);
+
+                let condition = document.querySelector('input[name="condition"]:checked').value;
+                localStorage.setItem("condition", condition);
+
+                let review = document.getElementById("review").value;
+                localStorage.setItem("review", review);
+
+                let fileInput = document.getElementById("image");
+                let file = fileInput.files[0];
+
+                if(!file){
+                  alert("please select an image");
+                  return;
+                }
+
+                let reader = new FileReader();
+                reader.onload = function(e){
+                  let image = e.target.result; //converts image to data url
+
+                  let listings = JSON.parse(localStorage.getItem("productListings")) || []; //retrieves listings or initializes an empty array
+
+                  //create new product object
+                  let newProduct ={
+                    productName: productName,
+                    sellPrice: sellPrice,
+                    condition: condition,
+                    review: review,
+                    image: image
+                  };
+
+                  listings.push(newProduct); //add new product to array
+                  localStorage.setItem("productListings", JSON.stringify(listings));
+                  window.location.href = "productListings.html"; //redirect to productLsitings
+                };
+                reader.readAsDataURL(file);
+            });
+            </script>
+    </body>

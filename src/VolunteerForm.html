@@ -1,0 +1,84 @@
+<!--
+Authors:        Ciana Lyle
+Date:           March 24th, 2025
+Class:          COSC 484-001
+Description:    Volunteer form.
+-->
+<html>
+    <head>
+        <style type="text/css">
+            table, th, td{
+                border-spacing: 0ch;
+                border: 1px solid;
+                width: 100%;
+                text-align: center;
+            }
+            td{
+                width: 50%;
+            }
+            th{
+                background-color: black;
+                color:azure;
+            }
+            h1{
+                text-align:center;
+            }
+            body{
+                background-color: #f1fef7;
+            }
+            h1, p, h2, h3 {
+                font-family: 'Helvetica';
+            }
+            .container {
+                display:block;
+            }
+
+            .small-image {
+                width: 100px; 
+                height: auto; 
+            }
+        </style>
+        <script>
+            function redirect() {
+                setTimeout(() => {
+                    window.location.href = "thankyouforapplying.html";
+                }, 1000);
+            }
+        </script>
+    </head>
+    <body>
+        <form action="mailto:EllenVienna4848@gmail.com?subject=Volunteer Form" method="post" enctype="text/plain" onsubmit="redirect()">
+            <div class="container">
+                <img src="les Queues Animal Rescue.jpg"style="margin:0px auto;display:block"class="small-image"/>
+                <h1>Les Queues Volunteer Form: </h1>
+            </div>
+        <table id="table1">
+            <tr><th colspan="2">Personal Information: </th></tr>
+            <tr>
+                <td>Name: </td>
+                <td><input type="textbox" name="Name" required="required"></td>
+            </tr>
+            <tr>
+                <td>Phone Number: </td>
+                <td><input type="textbox" name="Phone Number" required="required"></td>
+            </tr>
+            <tr>
+                <td>Email Address: </td>
+                <td><input type="email" name="Email" required="required"></td>
+            </tr>
+            <tr>
+                <td>What Days And Times Are You Typically Available: </td>
+                <td><input type="textbox" name="Description Of Times"></td>
+            </tr>
+            <tr>
+                <td>Have You Volunteered With Animals Before: </td>
+                <td><input type="textbox" name="Volunteered Before"></td>
+            </tr>
+        </table>
+        <div></div>
+        <p></p>
+        <p></p>
+            <input name="sbutton" type="submit" value="Submit">
+        </form>
+    </body>
+</html>

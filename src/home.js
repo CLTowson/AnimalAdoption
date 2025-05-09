@@ -2,6 +2,7 @@ import React from "react";
 import Slideshow from "./Slideshow";
 import style from "./Style.css";
 import VolunteerForm from "./VolunteerForm";
+import PetLanding from "./PetLanding";
 import { Link } from "react-router-dom";
 import logo from "./assets/les Queues Animal Rescue.jpg";
 
@@ -12,7 +13,7 @@ function Home() {
       <img src={logo} alt="Les Queues Logo" className="small-image" />
       <h1>Les Queues Animal Rescue</h1>
       <div>
-        <Link to="/AnimalDescriptions"><button>Animal Descriptions</button></Link>
+        <Link to="/PetLanding"><button>Animal Descriptions</button></Link>
         <Link to="/adopt">
             <button>Animal Adoption Form</button>
         </Link>

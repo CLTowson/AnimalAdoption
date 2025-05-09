@@ -48,9 +48,7 @@ function AnimalAdoptionForm() {
             <td><input type="text" name="Description" /></td>
           </tr>
         </tbody>
-      </table>
 
-      <table>
         <thead>
           <tr>
             <th colSpan="2">Animals:</th>

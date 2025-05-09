@@ -25,12 +25,9 @@ function AnimalAdoptionForm() {
       </div>
 
       <table>
-        <thead>
           <tr>
-            <th colSpan="2">Personal Information:</th>
+            <th colSpan="2"><h3>Personal Information:<h3></th>
           </tr>
-        </thead>
-        <tbody>
           <tr>
             <td>Name:</td>
             <td><input type="text" name="Name" required /></td>
@@ -47,14 +44,9 @@ function AnimalAdoptionForm() {
             <td>Description of Current Situation:</td>
             <td><input type="text" name="Description" /></td>
           </tr>
-        </tbody>
-
-        <thead>
           <tr>
-            <th colSpan="2">Animals:</th>
+            <th colSpan="2"><h3>Animals:<h3></th>
           </tr>
-        </thead>
-        <tbody>
           <tr>
             <td>Serial Code of Animal You are Looking to Adopt:</td>
             <td><input type="text" name="Animal Code" required /></td>
@@ -73,7 +65,6 @@ function AnimalAdoptionForm() {
               No: <input type="radio" name="Pet Now" value="No" />
             </td>
           </tr>
-        </tbody>
       </table>
 
       <div style={{ marginTop: "20px" }}>

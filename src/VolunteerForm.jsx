@@ -9,7 +9,7 @@ function VolunteerForm() {
   const handleSubmit = () => {
     setTimeout(() => {
       navigate("/thank-you");
-    }, 1000); // Gives browser time to open mail client
+    }, 1000); 
   };
 
   return (

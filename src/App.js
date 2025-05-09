@@ -5,8 +5,8 @@ import VolunteerForm from "./VolunteerForm";
 import ThankYou from "./ThankYou";
 import AnimalAdoptionForm from "./AnimalAdoptionForm";
 import PetLanding from "./PetLanding";
-import productListings from "./productListings";
-import confirmation from "./confirmation";
+import ProductListings from "./ProductListings";
+import Confirmation from "./Confirmation";
 import Sell from "./Sell";
 import Buy from "./Buy";
 
@@ -20,8 +20,8 @@ function App() {
         <Route path="/adopt" element={<AnimalAdoptionForm />} />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/PetLanding" element={<PetLanding />} />
-        <Route path="/productListings" element={<productListings />} />
-        <Route path="/confirmation" element={<confirmation />} />
+        <Route path="/ProductListings" element={<ProductListings />} />
+        <Route path="/Confirmation" element={<Confirmation />} />
         <Route path="/Sell" element={<Sell />} />
         <Route path="/Buy" element={<Buy />} />
       </Routes>

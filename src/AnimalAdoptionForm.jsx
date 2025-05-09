@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "./assets/les Queues Animal Rescue.jpg"; // Make sure this path is correct
-import "./Style.css"; // Create the CSS file as shown below
+import logo from "./assets/les Queues Animal Rescue.jpg"; 
+import "./Style.css"; 
 
 function AnimalAdoptionForm() {
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ function AnimalAdoptionForm() {
   const handleSubmit = () => {
     setTimeout(() => {
       navigate("/thank-you");
-    }, 1000); // Gives time for mailto to trigger
+    }, 1000); 
   };
 
   return (

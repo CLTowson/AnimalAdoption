@@ -5,8 +5,8 @@ import VolunteerForm from "./VolunteerForm";
 import ThankYou from "./ThankYou";
 import AnimalAdoptionForm from "./AnimalAdoptionForm";
 import PetLanding from "./PetLanding";
-import ProductListings from "./ProductListings";
-import Confirmation from "./Confirmation";
+import ProductListings from "./productListings";
+import Confirmation from "./confirmation";
 import Sell from "./Sell";
 import Buy from "./Buy";
 

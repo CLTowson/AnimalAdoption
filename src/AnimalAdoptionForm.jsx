@@ -26,7 +26,7 @@ function AnimalAdoptionForm() {
 
       <table>
           <tr>
-            <th colSpan="2" style="color:black;"><h3>Personal Information:</h3></th>
+            <th colSpan="2"><h3 style={"color:black;"}>Personal Information:</h3></th>
           </tr>
           <tr>
             <td>Name:</td>
@@ -45,7 +45,7 @@ function AnimalAdoptionForm() {
             <td><input type="text" name="Description" /></td>
           </tr>
           <tr>
-            <th colSpan="2" style = "color:black;"><h3>Animals:</h3></th>
+            <th colSpan="2"><h3 style={"color:black;"}>Animals:</h3></th>
           </tr>
           <tr>
             <td>Serial Code of Animal You are Looking to Adopt:</td>

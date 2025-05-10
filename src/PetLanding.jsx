@@ -4,7 +4,7 @@ const PetLandingPage = () => {
   const [pets, setPets] = useState([]);
 
   useEffect(() => {
-    fetch("https://animal-adoption-api-kzk9.onrender.com")
+    fetch("https://animal-adoption-api-kzk9.onrender.com/api/products")
       .then((res) => res.json())
       .then((data) => setPets(data))
       .catch((err) => console.error("Error fetching pets:", err));

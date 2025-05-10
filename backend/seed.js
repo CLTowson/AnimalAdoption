@@ -21,7 +21,7 @@ const pets = [
     sellPrice: 150,
     condition: 'Healthy, 1 year old',
     review: 'Energetic golden retriever who loves people.',
-    status: 'Available'
+    status: 'Available',
     photoURL: "https://i.imgur.com/H6cV5Xk.jpeg"
   },
   {
@@ -29,7 +29,7 @@ const pets = [
     sellPrice: 80,
     condition: 'Healthy, 3 years old',
     review: 'Gentle tabby cat who enjoys naps and windowsills.',
-    status: 'Available'
+    status: 'Available',
     photoURL: "https://i.imgur.com/H6cV5Xk.jpeg"
   },
   {
@@ -37,7 +37,7 @@ const pets = [
     sellPrice: 200,
     condition: 'Healthy, 6 months old',
     review: 'Playful lab puppy with lots of energy!',
-    status: 'Available'
+    status: 'Available',
     photoURL: "https://i.imgur.com/H6cV5Xk.jpeg"
   }
 ];

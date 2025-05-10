@@ -18,7 +18,7 @@ const PetLandingPage = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {pets.map((pet, index) => (
           <div key={index} className="bg-white rounded-2xl shadow-md overflow-hidden">
-            <img src={pet.image} alt={pet.productName} className="w-full h-64 object-cover" />
+            <img src={pet.photoURL} alt={pet.productName} className="w-full h-64 object-cover" />
             <div className="p-4">
               <h2 className="text-2xl font-semibold text-gray-800">{pet.productName}</h2>
               <p className="text-gray-600 mt-1">Condition: {pet.condition}</p>

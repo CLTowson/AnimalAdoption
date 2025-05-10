@@ -1,7 +1,6 @@
 // AUTHOR: Savannah Green
 // CLASS: COSC 484 
 // PROFESSOR: Jal Irani
-
 import React, { useEffect, useState } from "react";
 import "./Style.css";
 
@@ -9,8 +8,24 @@ const ProductListings = () => {
   const [listings, setListings] = useState([]);
 
   useEffect(() => {
-    const storedListings = JSON.parse(localStorage.getItem("productListings")) || [];
-    setListings(storedListings);
+    // Replace this URL with the RAW URL of your JSON file from GitHub
+    const githubJsonUrl =
+      "https://raw.githubusercontent.com/CLTowson/AnimalAdoption/refs/heads/main/src/backend/package-lock.json";
+
+
+     fetch(githubJsonUrl)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch product listings");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setListings(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching product listings:", error);
+      });
   }, []);
 
   const buyProduct = (productName) => {

@@ -22,7 +22,7 @@ const pets = [
     condition: 'Healthy, 1 year old',
     review: 'Energetic golden retriever who loves people.',
     status: 'Available',
-    photoURL: "https://i.imgur.com/H6cV5Xk.jpeg"
+    photoURL: "https://i.imgur.com/H6cV5Xk.jpeg" //golden retriever
   },
   {
     productName: 'Whiskers',
@@ -30,7 +30,7 @@ const pets = [
     condition: 'Healthy, 3 years old',
     review: 'Gentle tabby cat who enjoys naps and windowsills.',
     status: 'Available',
-    photoURL: "https://i.imgur.com/H6cV5Xk.jpeg"
+    photoURL: "https://i.imgur.com/H6cV5Xk.jpeg" //tabby cat
   },
   {
     productName: 'Bella',
@@ -38,7 +38,7 @@ const pets = [
     condition: 'Healthy, 6 months old',
     review: 'Playful lab puppy with lots of energy!',
     status: 'Available',
-    photoURL: "https://i.imgur.com/H6cV5Xk.jpeg"
+    photoURL: "https://i.imgur.com/QQ4e3Vf.jpeg" //labrador
   }
 ];
 

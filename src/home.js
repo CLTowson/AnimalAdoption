@@ -3,6 +3,7 @@ import Slideshow from "./Slideshow";
 import style from "./Style.css";
 import VolunteerForm from "./VolunteerForm";
 import PetLanding from "./PetLanding";
+import Sell from "./Sell";
 import { Link } from "react-router-dom";
 import logo from "./assets/les Queues Animal Rescue.jpg";
 
@@ -22,6 +23,10 @@ function Home() {
             <button>Volunteer Form</button>
         </Link>
         <Link to="/productListings"><button>Products</button></Link>
+
+        <Link to "/Sell">
+            <button>Sell Products</button>
+    </Link>
       </div>
       <Slideshow />
       <h2>About Us</h2>

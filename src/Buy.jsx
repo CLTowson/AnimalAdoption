@@ -4,7 +4,8 @@
 
 import React from "react";
 import "./Style.css";
-
+import {useNavigate} from "react-router-dom";
+const navigate = useNavigate{};
 const Buy = () => {
   const sold = (e) => {
     e.preventDefault();
@@ -20,7 +21,7 @@ const Buy = () => {
     });
 
     localStorage.setItem("productListings", JSON.stringify(listings));
-    window.location.href = "confirmation.html";
+    navigate("/confirmation");
   };
 
   return (

@@ -54,9 +54,6 @@ const Sell = () => {
   return (
     <>
       <h1>Les Queues Animal Rescue</h1>
-      <br />
-      <a href="productListings.html">Buy Products</a>
-      <br />
 
       <form id="listingForm" method="GET" action="productListings.html" onSubmit={handleSubmit}>
         <label htmlFor="Fname">First Name</label>

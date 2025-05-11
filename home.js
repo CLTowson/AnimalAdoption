@@ -2,6 +2,7 @@ import React from "react";
 import Slideshow from "./Slideshow";
 import style from "./Style.css";
 import VolunteerForm from "./VolunteerForm";
+import Sell from "./Sell";
 import { Link } from "react-router-dom";
 
 
@@ -20,6 +21,9 @@ function Home() {
             <button>Volunteer Form</button>
         </Link>
         <Link to="/productListings"><button>Products</button></Link>
+
+        </Link>
+        <Link to="/Sell"><button>Sell Products</button></Link>
       </div>
       <Slideshow />
       <h2>About Us</h2>

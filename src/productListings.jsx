@@ -3,6 +3,7 @@
 // PROFESSOR: Jal Irani
 import React, { useEffect, useState } from "react";
 import "./Style.css";
+import "./Purchase";
 
 const ProductListings = () => {
   const [listings, setListings] = useState([]);
@@ -14,7 +15,7 @@ const ProductListings = () => {
 
   const buyProduct = (productName) => {
     localStorage.setItem("selectedProduct", productName);
-    window.location.href = "Buy.html";
+    window.location.href = "Buy.jsx";
   };
 
   return (

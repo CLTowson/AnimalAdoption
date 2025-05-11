@@ -7,6 +7,7 @@ import "./Style.css";
 import { useNavigate } from "react-router-dom";
 
 const Sell = () => {
+  const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -28,9 +29,6 @@ const Sell = () => {
     if (!file) {
       alert("please select an image");
       return;
-    setTimeout(() => {
-      navigate("/home");
-    }, 1000);
     }
 
     const reader = new FileReader();
@@ -49,7 +47,7 @@ const Sell = () => {
 
       listings.push(newProduct);
       localStorage.setItem("productListings", JSON.stringify(listings));
-      window.location.href = "productListings.html";
+      navigate("/home");
     };
 
     reader.readAsDataURL(file);

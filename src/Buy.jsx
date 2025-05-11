@@ -5,7 +5,7 @@
 import React from "react";
 import "./Style.css";
 import {useNavigate} from "react-router-dom";
-const navigate = useNavigate{};
+const navigate = useNavigate();
 const Buy = () => {
   const sold = (e) => {
     e.preventDefault();

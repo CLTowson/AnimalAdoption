@@ -30,7 +30,7 @@ const pets = [
     condition: 'Healthy, 3 years old',
     review: 'Gentle tabby cat who enjoys naps and windowsills.',
     status: 'Available',
-    photoURL: "https://i.imgur.com/H6cV5Xk.jpeg" //tabby cat
+    photoURL: "https://i.imgur.com/9HsmsiF.jpeg" //tabby cat
   },
   {
     productName: 'Bella',

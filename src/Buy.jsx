@@ -65,4 +65,4 @@ const Buy = () => {
   );
 };
 
-export default Purchase;
+export default Buy;

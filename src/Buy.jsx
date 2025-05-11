@@ -5,7 +5,7 @@
 import React from "react";
 import "./Style.css";
 
-const Purchase = () => {
+const Buy = () => {
   const sold = (e) => {
     e.preventDefault();
 

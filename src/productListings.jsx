@@ -16,7 +16,7 @@ const ProductListings = () => {
 
   const buyProduct = (productName) => {
     localStorage.setItem("selectedProduct", productName);
-    navigate("/buy");
+    navigate("/Buy");
   };
 
   return (

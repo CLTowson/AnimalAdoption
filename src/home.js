@@ -24,9 +24,9 @@ function Home() {
         </Link>
         <Link to="/productListings"><button>Products</button></Link>
 
-        <Link to "/Sell">
+        <Link to="/Sell">
             <button>Sell Products</button>
-    </Link>
+        </Link>
       </div>
       <Slideshow />
       <h2>About Us</h2>

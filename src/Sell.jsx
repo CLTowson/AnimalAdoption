@@ -4,6 +4,7 @@
 
 import React, { useState } from "react";
 import "./Style.css";
+import { useNavigate } from "react-router-dom";
 
 const Sell = () => {
   const handleSubmit = (event) => {
@@ -28,7 +29,7 @@ const Sell = () => {
       alert("please select an image");
       return;
     setTimeout(() => {
-      navigate("/thank-you");
+      navigate("/home");
     }, 1000);
     }
 

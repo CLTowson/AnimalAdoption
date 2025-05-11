@@ -27,6 +27,9 @@ const Sell = () => {
     if (!file) {
       alert("please select an image");
       return;
+    setTimeout(() => {
+      navigate("/thank-you");
+    }, 1000);
     }
 
     const reader = new FileReader();
@@ -50,12 +53,11 @@ const Sell = () => {
 
     reader.readAsDataURL(file);
   };
-
   return (
     <>
       <h1>Les Queues Animal Rescue</h1>
 
-      <form id="listingForm" method="GET" action="productListings.html" onSubmit={handleSubmit}>
+      <form id="listingForm" method="GET" onSubmit={handleSubmit}>
         <label htmlFor="Fname">First Name</label>
         <br />
         <input type="text" name="Fname" required />

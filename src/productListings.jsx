@@ -3,10 +3,11 @@
 // PROFESSOR: Jal Irani
 import React, { useEffect, useState } from "react";
 import "./Style.css";
-import "./Purchase";
+import {useNavigate} from "react-router-dom";
 
 const ProductListings = () => {
   const [listings, setListings] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const storedListings = JSON.parse(localStorage.getItem("productListings")) || [];
@@ -15,7 +16,7 @@ const ProductListings = () => {
 
   const buyProduct = (productName) => {
     localStorage.setItem("selectedProduct", productName);
-    window.location.href = "Buy.jsx";
+    navigate("/buy");
   };
 
   return (
